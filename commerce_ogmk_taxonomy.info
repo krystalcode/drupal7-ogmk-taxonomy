@@ -1,0 +1,17 @@
+name = Commerce Marketplace Taxonomy
+description = A module that provides category and label taxonomies for a commerce marketplace.
+core = 7.x
+package = Commerce Marketplace Features
+version = 7.x-0.1-dev
+project = commerce_ogmk_taxonomy
+features[features_api][] = api:2
+features[field_base][] = field_category_ref
+features[field_base][] = field_labels_ref
+features[field_instance][] = node-product-field_category_ref
+features[field_instance][] = node-product-field_labels_ref
+features[taxonomy][] = categories
+features[taxonomy][] = labels
+features_exclude[dependencies][app_commons] = app_commons
+features_exclude[dependencies][features] = features
+features_exclude[dependencies][options] = options
+features_exclude[dependencies][taxonomy] = taxonomy
