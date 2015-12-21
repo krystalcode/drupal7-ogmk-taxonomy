@@ -5,96 +5,99 @@
  */
 
 /**
+ * @Issue(
+ *   "Field labels should be exported in English"
+ *   type="bug"
+ *   priority="normal"
+ * )
+ */
+
+/**
  * Implements hook_field_default_field_instances().
  */
 function commerce_ogmk_taxonomy_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-product-field_category_ref'
-  $field_instances['node-product-field_category_ref'] = array(
-    'bundle' => 'product',
+  // Exported field_instance: 'taxonomy_term-categories-description_field'.
+  $field_instances['taxonomy_term-categories-description_field'] = array(
+    'bundle' => 'categories',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'app_commons',
-        'settings' => array(
-          'uri' => 'products',
-        ),
-        'type' => 'taxonomy_term_reference_search_link',
-        'weight' => 5,
-      ),
-      'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 1,
       ),
     ),
-    'entity_type' => 'node',
-    'field_name' => 'field_category_ref',
-    'label' => 'Category',
-    'required' => 1,
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'description_field',
+    'label' => 'Descripción',
+    'required' => FALSE,
     'settings' => array(
+      'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 31,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => -5,
     ),
   );
 
-  // Exported field_instance: 'node-product-field_labels_ref'
-  $field_instances['node-product-field_labels_ref'] = array(
-    'bundle' => 'product',
+  // Exported field_instance: 'taxonomy_term-categories-name_field'.
+  $field_instances['taxonomy_term-categories-name_field'] = array(
+    'bundle' => 'categories',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'app_commons',
-        'settings' => array(
-          'uri' => 'products',
-        ),
-        'type' => 'taxonomy_term_reference_search_link',
-        'weight' => 6,
-      ),
-      'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 0,
       ),
     ),
-    'entity_type' => 'node',
-    'field_name' => 'field_labels_ref',
-    'label' => 'Labels',
-    'required' => 0,
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Nombre',
+    'required' => TRUE,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'module' => 'text',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 32,
+      'type' => 'text_textfield',
+      'weight' => -5,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Category');
-  t('Labels');
+  t('Descripción');
+  t('Nombre');
 
   return $field_instances;
 }
