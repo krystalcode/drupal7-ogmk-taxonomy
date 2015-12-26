@@ -7,6 +7,7 @@ project = commerce_ogmk_taxonomy
 dependencies[] = features
 dependencies[] = taxonomy
 dependencies[] = text
+dependencies[] = ogmk_base
 features[features_api][] = api:2
 features[field_base][] = field_category_ref
 features[field_base][] = field_labels_ref
