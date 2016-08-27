@@ -25,5 +25,13 @@ function commerce_ogmk_taxonomy_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => 0,
     ),
+    'ogmk_cost_types' => array(
+      'name' => 'Cost Types',
+      'machine_name' => 'ogmk_cost_types',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
   );
 }
