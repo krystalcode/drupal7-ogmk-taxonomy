@@ -18,9 +18,9 @@
 function ogmk_taxonomy_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'taxonomy_term-categories-description_field'.
-  $field_instances['taxonomy_term-categories-description_field'] = array(
-    'bundle' => 'categories',
+  // Exported field_instance: 'taxonomy_term-ogmk_categories-description_field'.
+  $field_instances['taxonomy_term-ogmk_categories-description_field'] = array(
+    'bundle' => 'ogmk_categories',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -57,9 +57,9 @@ function ogmk_taxonomy_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-categories-name_field'.
-  $field_instances['taxonomy_term-categories-name_field'] = array(
-    'bundle' => 'categories',
+  // Exported field_instance: 'taxonomy_term-ogmk_categories-name_field'.
+  $field_instances['taxonomy_term-ogmk_categories-name_field'] = array(
+    'bundle' => 'ogmk_categories',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',

@@ -9,17 +9,9 @@
  */
 function ogmk_taxonomy_taxonomy_default_vocabularies() {
   return array(
-    'categories' => array(
+    'ogmk_categories' => array(
       'name' => 'Categories',
-      'machine_name' => 'categories',
-      'description' => '',
-      'hierarchy' => 0,
-      'module' => 'taxonomy',
-      'weight' => 0,
-    ),
-    'labels' => array(
-      'name' => 'Labels',
-      'machine_name' => 'labels',
+      'machine_name' => 'ogmk_categories',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
@@ -28,6 +20,14 @@ function ogmk_taxonomy_taxonomy_default_vocabularies() {
     'ogmk_cost_types' => array(
       'name' => 'Cost Types',
       'machine_name' => 'ogmk_cost_types',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
+    'ogmk_labels' => array(
+      'name' => 'Labels',
+      'machine_name' => 'ogmk_labels',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',

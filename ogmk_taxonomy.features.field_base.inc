@@ -27,7 +27,7 @@ function ogmk_taxonomy_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'categories',
+          'vocabulary' => 'ogmk_categories',
           'parent' => 0,
         ),
       ),
@@ -83,7 +83,7 @@ function ogmk_taxonomy_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'labels',
+          'vocabulary' => 'ogmk_labels',
           'parent' => 0,
         ),
       ),
