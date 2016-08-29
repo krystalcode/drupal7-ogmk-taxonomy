@@ -4,4 +4,4 @@
  * Code for the Commerce Marketplace Taxonomy feature.
  */
 
-include_once 'commerce_ogmk_taxonomy.features.inc';
+include_once 'ogmk_taxonomy.features.inc';

@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * commerce_ogmk_taxonomy.features.field_instance.inc
+ * ogmk_taxonomy.features.field_instance.inc
  */
 
 /**
@@ -15,7 +15,7 @@
 /**
  * Implements hook_field_default_field_instances().
  */
-function commerce_ogmk_taxonomy_field_default_field_instances() {
+function ogmk_taxonomy_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'taxonomy_term-categories-description_field'.

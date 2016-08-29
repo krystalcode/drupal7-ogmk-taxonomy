@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * commerce_ogmk_taxonomy.features.field_base.inc
+ * ogmk_taxonomy.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function commerce_ogmk_taxonomy_field_default_field_bases() {
+function ogmk_taxonomy_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'ogmk_category_ref'.

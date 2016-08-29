@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * commerce_ogmk_taxonomy.strongarm.inc
+ * ogmk_taxonomy.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function commerce_ogmk_taxonomy_strongarm() {
+function ogmk_taxonomy_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

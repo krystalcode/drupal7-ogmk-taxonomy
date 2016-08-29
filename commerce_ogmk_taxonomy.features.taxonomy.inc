@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * commerce_ogmk_taxonomy.features.taxonomy.inc
+ * ogmk_taxonomy.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function commerce_ogmk_taxonomy_taxonomy_default_vocabularies() {
+function ogmk_taxonomy_taxonomy_default_vocabularies() {
   return array(
     'categories' => array(
       'name' => 'Categories',
