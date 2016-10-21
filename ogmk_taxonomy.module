@@ -5,3 +5,44 @@
  */
 
 include_once 'ogmk_taxonomy.features.inc';
+
+/**
+ * Hooks.
+ */
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function ogmk_taxonomy_entity_info_alter(&$entity_info) {
+  $entity_info['taxonomy_term']['view modes']['teaser'] = array(
+    'label' => t('Teaser'),
+    'custom settings' => FALSE,
+  );
+}
+
+/**
+ * Implements hook_file_download_access().
+ *
+ * The file module delegates access control for file fields to the module that
+ * provides the entity that the field is attached to. The taxonomy module though
+ * does not implement file download access control, and permission to file
+ * fields that belong to taxonomy terms is denied.
+ *
+ * We solve this by allowing access to a taxonomy term file if the user has
+ * access to view the taxonomy term entity.
+ *
+ * @see https://www.drupal.org/node/1327224
+ *
+ * @Issue(
+ *   "Submit patch for taxonomy term file fields access control in taxonomy core
+ *   module to Drupal.org"
+ *   type="task"
+ *   priority="low"
+ *   labels="contribution"
+ * )
+ */
+function ogmk_taxonomy_file_download_access($file_item, $entity_type, $entity) {
+  if ($entity_type === 'taxonomy_term' && entity_access('view', $entity_type, $entity)) {
+    return TRUE;
+  }
+}
