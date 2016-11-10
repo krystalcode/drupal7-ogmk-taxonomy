@@ -13,6 +13,7 @@ dependencies[] = taxonomy
 dependencies[] = text
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
+features[field_base][] = ogmk_categories_ref
 features[field_base][] = ogmk_category_ref
 features[field_base][] = ogmk_cost_type_ref
 features[field_base][] = ogmk_labels_ref
